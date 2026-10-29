@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset>section {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px double gray;
+}
+
+fieldset>button {
+	width: 10%;
+}
+
+fieldset>section>* {
+	width: 20%;
+}
+
+p {
+	display: inline-block;
+	margin: 0;
+}
+
+span>* {
+	vertical-align: middle;
+}

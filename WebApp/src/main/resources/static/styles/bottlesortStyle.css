@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+section>section {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+}

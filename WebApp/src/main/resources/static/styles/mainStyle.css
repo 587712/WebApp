@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-body,
-main {
+body, main {
 	display: flex;
 	flex-direction: column;
 	text-align: center;

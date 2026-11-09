@@ -4,7 +4,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/mainStyle.css">
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/bottlesortStyle.css">
 		<title>Bottlesort</title>
 	</head>
 	<body>

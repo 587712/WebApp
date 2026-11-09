@@ -10,9 +10,7 @@ class Game extends HTMLElement {
 	async #setUp(method) {
 	    try {
 	        const response = await fetch("/bottlesort/" + method);
-	        if (!response.ok) {
-	            throw new Error(`HTTP error: ${response.status}`);
-	        }
+	        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 			while(this.#shadow.firstChild) this.#shadow.removeChild(this.#shadow.firstChild);
 	        const data = await response.json();
 			const style = document.createElement("style");

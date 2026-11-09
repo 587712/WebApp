@@ -33,6 +33,7 @@ public class BottlesortController {
 		Map<String, Object> response = new HashMap<>();
 		response.put("board", board);
 		response.put("win", board.checkWin());
+		response.put("style", getCSS());
 		return response;
 	}
 	
@@ -48,6 +49,10 @@ public class BottlesortController {
 	public Map<String, Object> nextLevel() {
 		if(board.checkWin()) board.nextStage();
 		return setUp();
+	}
+	
+	private String getCSS() {
+		return "section { display: flex;flex-direction: row;justify-content: space-evenly;}section > section {display: flex;flex-direction: column;border: 2px solid black;}";
 	}
 	
 }

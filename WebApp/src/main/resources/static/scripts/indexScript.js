@@ -2,11 +2,13 @@ class List extends HTMLElement {
 	#shadow;
 	constructor() {
 		super();
-		const data = this.#get("setup");
-		const style = document.createElement("style");
-		style.textContent = data.style;
-		this.#shadow.appendChild(style);
 		this.#shadow = this.attachShadow({ mode: "closed" });
+		const data = this.#get("setup");
+		if(data && data.style) {
+			const style = document.createElement("style");
+			style.textContent = data.style;
+			this.#shadow.appendChild(style);
+		}
 		const lightsoutBtn = document.createElement("button");
 		lightsoutBtn.textContent = "Lights Out";
 		lightsoutBtn.addEventListener("click", () => this.#gotoPage(`${contextPath}/lightsout/play`));
